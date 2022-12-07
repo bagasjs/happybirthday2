@@ -1,2 +1,2 @@
 # happybirthday2
-## Birthday Card for some1
+Birthday Card for someone from me
