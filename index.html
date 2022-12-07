@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script defer src="./js/nx.js"></script>
+		<script defer src="./js/script.js"></script>
+		<title>
+			Happy Birthday
+		</title>
+	</head>
+	<body>
+		<div class="w-screen h-screen flex justify-center items-center">
+			<div class="p-10 border border-2 border-black max-w-lg max-h-80" id="data-prompt" hidden>
+				<table>
+					<tr>
+						<td class="p-2">
+							<label for="name">Person's name</label>
+						</td>
+						<td class="p-2">
+							<input id="name" type="text" class="border border-2 border-black">
+						</td>
+					</tr>
+					<tr>
+						<td class="p-2">
+							<label for="dob">Date of birthday</label>
+						</td>
+						<td class="p-2">
+							<input type="date" id="dob" class="border border-2 border-black">
+						</td>
+					</tr>
+				</table>
+				<div class="my-5">
+					<button type="submit" id="make-card" class="border border-black border-2 py-2 px-5 hover:bg-black hover:text-white">Make Card!</button>
+				</div>
+			</div>
+			<div id="before-birthday" hidden>
+				<h1>It's not Your Birthday yet <nx-value name="targetName"></nx-value></h1>
+			</div>
+			<div id="birthday-card" hidden>
+				<div class="p-10 border-2 border-blue-500 max-w-2xl">
+					<div>
+						<h1 class="text-xl">To: <nx-value name="targetName"></nx-value></h1>
+					</div>
+					<div>
+						<p class="text-3xl">
+							Congrats on your birthday <nx-value name="targetName"></nx-value>. God bless you. Not the best birthday card for 2022 but whatever.
+						</p>
+						<p class="text-lg">
+							P.S: Do not break the card system. In case you are trying to do it.
+						</p>
+					</div>
+					<div class="flex justify-end w-full">
+						<h1 class="text-xl">Bagas J.S.</h1>
+					</div>
+				</div>
+			</div>
+			<div id="after-birthday" hidden>
+				<h1>What the hell are you doing here</h1>
+			</div>
+		</div>
+	</body>
+</html>
